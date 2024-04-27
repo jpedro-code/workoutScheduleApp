@@ -1,5 +1,15 @@
 <resources>
-    <string name="app_name">workoutSchedule</string>
+    <string name="app_name">WorkoutSchedule</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="e_mail">E-mail:</string>
+    <string name="senha">Senha:</string>
+    <string name="emai_email_com_hint">email@email.com</string>
+    <string name="password_hint">********</string>
+    <string name="login">Login</string>
+    <string name="criar_conta">Criar Conta</string>
+    <string name="enviar">Enviar</string>
+    <string name="recuperar_conta">Recuperar Conta</string>
+    <string name="informacao_recuperacao_conta">Informe seu E-mail para enviarmos os dados para recuperação de sua conta</string>
+    <string name="loading">...</string>
 </resources>

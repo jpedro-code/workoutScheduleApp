@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "860193629055",
+    "project_id": "workoutschedule-74676",
+    "storage_bucket": "workoutschedule-74676.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860193629055:android:f447901269a8edad65f04a",
+        "android_client_info": {
+          "package_name": "com.devandroid.workoutschedule"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHEiHyx10TCOaUzOZUXbOJ8OX8dhrDLz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
