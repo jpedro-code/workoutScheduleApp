@@ -10,10 +10,15 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.devandroid.workoutschedule.R
 import com.devandroid.workoutschedule.databinding.FragmentSplashBinding
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 class SplashFragment : Fragment() {
     private var _binding: FragmentSplashBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var auth: FirebaseAuth
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,7 +33,14 @@ class SplashFragment : Fragment() {
         Handler(Looper.getMainLooper()).postDelayed(this::checkAuth,3000) // tempo de tela splash
     }
     private fun checkAuth(){
-        findNavController().navigate(R.id.loginFragment)
+        auth = Firebase.auth
+        val user = Firebase.auth.currentUser
+        if (user != null) {
+            findNavController().navigate(R.id.action_splashFragment_to_homeFragment3)
+        } else {
+            findNavController().navigate(R.id.action_splashFragment_to_auth)
+        }
+
     }
 
     override fun onDestroyView() {

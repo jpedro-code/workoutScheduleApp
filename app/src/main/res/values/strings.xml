@@ -12,4 +12,25 @@
     <string name="recuperar_conta">Recuperar Conta</string>
     <string name="informacao_recuperacao_conta">Informe seu E-mail para enviarmos os dados para recuperação de sua conta</string>
     <string name="loading">...</string>
+    <string name="carregando_treinos">Carregando Treinos..</string>
+    <string name="carregando_exerc_cios">Carregando Exercícios...</string>
+    <string name="account_not_registered_register_fragment">Nenhuma conta encontrada com este e-mail.</string>
+    <string name="strong_password_register_fragment">Insira uma senha mais forte.</string>
+    <string name="error_default">Ocorreu um Erro ao tentar logar</string>
+    <string name="novo_treino">Novo Treino..</string>
+    <string name="treino">Treino</string>
+    <string name="nome_do_treino">Nome do treino: </string>
+    <string name="descri_o_do_treino">Descrição do Treino: </string>
+    <string name="data_do_treino">Data do Treino: </string>
+    <string name="_22_01_2024">22/01/2024</string>
+    <string name="salvar">Salvar</string>
+    <string name="nome_do_exercicio">Nome do Exercicio:</string>
+    <string name="exercicio">Exercício: </string>
+    <string name="descri_o_do_exerc_cio">Descrição do Exercício:</string>
+    <string name="foto_do_exerc_cio">Foto do Exercício:</string>
+    <string name="novo_exerc_cio">Novo Exercício</string>
+    <string name="remover">Remover</string>
+    <string name="detalhes">Detalhes</string>
+    <string name="editar">Editar</string>
+    <string name="text_treino_list_empty_todo_fragment">Texto Vazio\n</string>
 </resources>

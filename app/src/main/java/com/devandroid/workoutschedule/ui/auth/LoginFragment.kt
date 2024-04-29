@@ -1,6 +1,7 @@
 package com.devandroid.workoutschedule.ui.auth
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.devandroid.workoutschedule.R
 import com.devandroid.workoutschedule.databinding.FragmentLoginBinding
+import com.devandroid.workoutschedule.helper.FirebaseHelper
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -65,12 +67,11 @@ class LoginFragment : Fragment() {
         auth.signInWithEmailAndPassword(email,password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    binding.progressBar.isVisible = false
-                    findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+                    findNavController().navigate(R.id.action_global_homeFragment)
                 } else {
-                    binding.progressBar.isVisible = false
-                    Toast.makeText(requireContext(), "Erro ao logar!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), FirebaseHelper.erroValidation(task.exception?.message?:"Erro Ao logar"), Toast.LENGTH_SHORT).show()
                 }
+                binding.progressBar.isVisible = false
             }
     }
 

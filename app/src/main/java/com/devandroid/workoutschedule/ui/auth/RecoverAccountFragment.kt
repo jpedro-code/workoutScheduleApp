@@ -10,6 +10,7 @@ import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.devandroid.workoutschedule.R
 import com.devandroid.workoutschedule.databinding.FragmentRecoverAccountBinding
+import com.devandroid.workoutschedule.helper.FirebaseHelper
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -54,6 +55,7 @@ class RecoverAccountFragment : Fragment() {
                 if (task.isSuccessful) {
                     Toast.makeText(requireContext(), "Verifique seu email!Um link de recuperação de senha foi enviado", Toast.LENGTH_LONG).show()
                 } else {
+                    Toast.makeText(requireContext(), FirebaseHelper.erroValidation(task.exception?.message?:"Erro Ao logar"), Toast.LENGTH_SHORT).show()
                     binding.progressBar.isVisible = false
                 }
             }

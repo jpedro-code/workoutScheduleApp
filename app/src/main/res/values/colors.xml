@@ -3,5 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="primary_color">#11B9FB</color>
+    <color name="tab_layout_color">#11B9FB</color>
 
 </resources>

@@ -11,45 +11,71 @@
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
-            android:id="@+id/action_splashFragment_to_loginFragment2"
-            app:destination="@id/loginFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.devandroid.workoutschedule.ui.auth.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+            android:id="@+id/action_splashFragment_to_auth"
+            app:destination="@id/authUser"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
         <action
-            android:id="@+id/action_loginFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_recoverAccountFragment"
-            app:destination="@id/recoverAccountFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_homeFragment"
+            android:id="@+id/action_splashFragment_to_homeFragment3"
             app:destination="@id/homeFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true"/>
     </fragment>
     <fragment
-        android:id="@+id/registerFragment"
-        android:name="com.devandroid.workoutschedule.ui.auth.RegisterFragment"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
-        <action
-            android:id="@+id/action_registerFragment_to_homeFragment"
-            app:destination="@id/homeFragment"
-            app:popUpTo="@id/loginFragment"
-            app:popUpToInclusive="true"/>
-    </fragment>
-    <fragment
-        android:id="@+id/recoverAccountFragment"
-        android:name="com.devandroid.workoutschedule.ui.auth.RecoverAccountFragment"
-        android:label="fragment_recover_account"
-        tools:layout="@layout/fragment_recover_account" />
-    <fragment
         android:id="@+id/homeFragment"
-        android:name="com.devandroid.workoutschedule.HomeFragment"
+        android:name="com.devandroid.workoutschedule.ui.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_splashFragment2"
+            app:destination="@id/splashFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_homeFragment_to_formFragment"
+            app:destination="@id/formFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_formExercicioFragment"
+            app:destination="@id/formExercicioFragment" />
+    </fragment>
+    <navigation android:id="@+id/authUser"
+        app:startDestination="@id/loginFragment">
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.devandroid.workoutschedule.ui.auth.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login" >
+            <action
+                android:id="@+id/action_loginFragment_to_registerFragment"
+                app:destination="@id/registerFragment" />
+            <action
+                android:id="@+id/action_loginFragment_to_recoverAccountFragment"
+                app:destination="@id/recoverAccountFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/registerFragment"
+            android:name="com.devandroid.workoutschedule.ui.auth.RegisterFragment"
+            android:label="fragment_register"
+            tools:layout="@layout/fragment_register" />
+        <fragment
+            android:id="@+id/recoverAccountFragment"
+            android:name="com.devandroid.workoutschedule.ui.auth.RecoverAccountFragment"
+            android:label="fragment_recover_account"
+            tools:layout="@layout/fragment_recover_account" />
+        <action
+            android:id="@+id/action_global_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+    </navigation>
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.devandroid.workoutschedule.ui.FormTreinoFragment"
+        android:label="fragment_form"
+        tools:layout="@layout/fragment_form_treino" />
+    <fragment
+        android:id="@+id/formExercicioFragment"
+        android:name="com.devandroid.workoutschedule.FormExercicioFragment"
+        android:label="fragment_form_exercicio"
+        tools:layout="@layout/fragment_form_exercicio" />
 </navigation>

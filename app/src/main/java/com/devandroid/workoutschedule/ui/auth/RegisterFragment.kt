@@ -10,6 +10,7 @@ import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.devandroid.workoutschedule.R
 import com.devandroid.workoutschedule.databinding.FragmentRegisterBinding
+import com.devandroid.workoutschedule.helper.FirebaseHelper
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -61,8 +62,9 @@ class RegisterFragment : Fragment() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    findNavController().navigate(R.id.action_registerFragment_to_homeFragment)
+                    findNavController().navigate(R.id.action_global_homeFragment)
                 } else {
+                    Toast.makeText(requireContext(), FirebaseHelper.erroValidation(task.exception?.message?:"Erro Ao logar"), Toast.LENGTH_SHORT).show()
                     binding.progressBar.isVisible = false
                 }
             }
