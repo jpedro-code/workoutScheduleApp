@@ -64,6 +64,7 @@ Este é um aplicativo de gerenciamento de treinos desenvolvido em Kotlin. Ele pe
    ```bash
    git clone https://github.com/jpedro-code/workoutScheduleApp.git
    cd treinos-app
+  `
 
 2. Abra o projeto no Android Studio.
 
@@ -80,6 +81,7 @@ Este é um aplicativo de gerenciamento de treinos desenvolvido em Kotlin. Ele pe
 
 ```plaintext
 Project Structure -> Dependencies -> Import Firebase
+```
 
 5. Execute o aplicativo em um dispositivo ou emulador Android.
 
