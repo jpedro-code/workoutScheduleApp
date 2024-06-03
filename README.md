@@ -112,25 +112,25 @@ Essa estrutura permite que os usuários gerenciem seus treinos de forma eficient
 ## Requisitos Funcionais:
 
 1. **Registro e Login de Usuários:** 
-    - O sistema deve permitir que os usuários se registrem e façam login utilizando um endereço de e-mail e senha.
+    - O sistema permite que os usuários se registrem e façam login utilizando um endereço de e-mail e senha.
 2. **Gerenciamento de Treinos:**
-    - Criar Treino: Os usuários devem poder adicionar novos treinos com nome, descrição e data.
-    - Editar Treino: Os usuários devem poder atualizar as informações de treinos existentes.
-    - Excluir Treino: Os usuários devem poder remover treinos que não são mais necessários.
-    - Visualizar Treinos: Os usuários devem poder ver uma lista de todos os treinos cadastrados.
+    - Criar Treino: Os usuários podem adicionar novos treinos com nome, descrição e data.
+    - Editar Treino: Os usuários podem atualizar as informações de treinos existentes.
+    - Excluir Treino: Os usuários podem remover treinos que não são mais necessários.
+    - Visualizar Treinos: Os usuários podem ver uma lista de todos os treinos cadastrados.
 
 ## Requisitos Não Funcionais:
 
 1. **Segurança**: 
-    - As informações dos usuários e treinos devem ser armazenadas de forma segura, com as senhas sendo criptografadas.
+    - As informações dos usuários e treinos estão armazenadas de forma segura, com as senhas sendo criptografadas.
 2. **Desempenho**: 
-    - O aplicativo deve ter tempos de resposta rápidos ao realizar operações de criação, leitura, atualização e exclusão de treinos.
-3. **Disponibilidade**: 
-    - O sistema deve estar disponível para acesso e uso pelos usuários a qualquer momento, desde que tenham uma conexão com a internet.
+    - O aplicativo tem tempos de resposta rápidos ao realizar operações de criação, leitura, atualização e exclusão de treinos.
+3. **Usabilidade**: 
+    - A interface do usuário é intuitiva e fácil de usar, garantindo uma experiência agradável para o usuário.
 4. **Compatibilidade**: 
-    - O aplicativo deve ser compatível com uma variedade de dispositivos Android e tamanhos de tela.
+    - O aplicativo é compatível com uma variedade de dispositivos Android e tamanhos de tela.
 5. **Manutenibilidade**:
-    - O código-fonte do aplicativo deve ser organizado e comentado de forma clara, facilitando a manutenção e futuras atualizações.
+    - O código-fonte do aplicativo está organizado e comentado de forma clara, facilitando a manutenção e futuras atualizações.
 
 ## Configuração do Ambiente
 
