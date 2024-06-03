@@ -67,7 +67,7 @@ Este aplicativo utiliza o Firebase Realtime Database para armazenar e sincroniza
 
 ## Explicação dos campos usuarios e treinos
 
-1.**Usuarios**:
+1. **Usuarios**:
 
 - nome: Nome completo do usuário.
 - email: Endereço de e-mail do usuário, usado para autenticação.
