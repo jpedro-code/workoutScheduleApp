@@ -64,6 +64,10 @@ class FormTreinoFragment : Fragment() {
         binding.btnSalvar.setOnClickListener{
             validateDatas()
         }
+
+        binding.imgbLogout.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     private fun validateDatas(){

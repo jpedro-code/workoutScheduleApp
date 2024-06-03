@@ -39,7 +39,7 @@
             app:destination="@id/formExercicioFragment" />
     </fragment>
     <navigation android:id="@+id/authUser"
-        app:startDestination="@id/loginFragment">
+        app:startDestination="@id/recoverAccountFragment">
         <fragment
             android:id="@+id/loginFragment"
             android:name="com.devandroid.workoutschedule.ui.auth.LoginFragment"
@@ -83,4 +83,14 @@
         android:name="com.devandroid.workoutschedule.FormExercicioFragment"
         android:label="fragment_form_exercicio"
         tools:layout="@layout/fragment_form_exercicio" />
+    <fragment
+        android:id="@+id/treinosCadastradosFragment"
+        android:name="com.devandroid.workoutschedule.ui.TreinosCadastradosFragment"
+        android:label="fragment_treinos_cadastrados"
+        tools:layout="@layout/fragment_treinos_cadastrados" />
+    <fragment
+        android:id="@+id/exerciciosCadastradosFragment"
+        android:name="com.devandroid.workoutschedule.ui.ExerciciosCadastradosFragment"
+        android:label="fragment_exercicios_cadastrados"
+        tools:layout="@layout/fragment_exercicios_cadastrados" />
 </navigation>

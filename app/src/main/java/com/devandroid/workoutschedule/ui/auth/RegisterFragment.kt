@@ -40,6 +40,10 @@ class RegisterFragment : Fragment() {
 
     private fun initClicks(){
         binding.btnCriarConta.setOnClickListener{ validateData() }
+
+        binding.imgbLogout.setOnClickListener {
+            findNavController().navigate(R.id.loginFragment)
+        }
     }
 
     private fun validateData(){

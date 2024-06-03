@@ -37,6 +37,10 @@ class RecoverAccountFragment : Fragment() {
 
     private fun initClicks(){
         binding.btnEnviar.setOnClickListener{ validateData() }
+
+        binding.imgbLogout.setOnClickListener {
+            findNavController().navigate(R.id.loginFragment)
+        }
     }
 
     private fun validateData(){
