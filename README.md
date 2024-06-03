@@ -121,11 +121,16 @@ Essa estrutura permite que os usuários gerenciem seus treinos de forma eficient
 
 ## Requisitos Não Funcionais:
 
-1. Segurança: As informações dos usuários e treinos devem ser armazenadas de forma segura, com as senhas sendo criptografadas.
-2. Desempenho: O aplicativo deve ter tempos de resposta rápidos ao realizar operações de criação, leitura, atualização e exclusão de treinos.
-3. Disponibilidade: O sistema deve estar disponível para acesso e uso pelos usuários a qualquer momento, desde que tenham uma conexão com a internet.
-4. Compatibilidade: O aplicativo deve ser compatível com uma variedade de dispositivos Android e tamanhos de tela.
-5. Manutenibilidade: O código-fonte do aplicativo deve ser organizado e comentado de forma clara, facilitando a manutenção e futuras atualizações.
+1. Segurança: 
+    - As informações dos usuários e treinos devem ser armazenadas de forma segura, com as senhas sendo criptografadas.
+2. Desempenho: 
+    - O aplicativo deve ter tempos de resposta rápidos ao realizar operações de criação, leitura, atualização e exclusão de treinos.
+3. Disponibilidade: 
+    - O sistema deve estar disponível para acesso e uso pelos usuários a qualquer momento, desde que tenham uma conexão com a internet.
+4. Compatibilidade: 
+    - O aplicativo deve ser compatível com uma variedade de dispositivos Android e tamanhos de tela.
+5. Manutenibilidade:
+    - O código-fonte do aplicativo deve ser organizado e comentado de forma clara, facilitando a manutenção e futuras atualizações.
 
 ## Configuração do Ambiente
 
