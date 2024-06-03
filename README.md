@@ -46,7 +46,9 @@ Este é um aplicativo de gerenciamento de treinos desenvolvido em Kotlin. Ele pe
 │   │   │   │   ├── values
 │   │   │   │   │   ├── strings.xml
 │   │   │   │   │   ├── colors.xml
-│   │   │   │   │   ├── styles.xml
+│   │   │   │   │   ├── styles.xml 
+
+```
 
 ## Configuração do Ambiente
 
