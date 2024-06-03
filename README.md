@@ -49,6 +49,25 @@ Este é um aplicativo de gerenciamento de treinos desenvolvido em Kotlin. Ele pe
 │   │   │   │   │   ├── styles.xml 
 
 ```
+## Estrutura de Dados no Firebase
+Este aplicativo utiliza o Firebase Realtime Database para armazenar e sincronizar os dados dos treinos dos usuários. Abaixo está a estrutura de dados utilizada no Firebase:
+
+- `usuarios` (coleção)
+  - {usuario_id} (documento)
+    - nome
+    - email
+    - senha
+
+- `treinos` (coleção)
+  - {treino_id} (documento)
+    - usuario_id
+    - nome
+    - descricao
+    - data
+
+Cada usuário tem sua própria entrada na coleção `usuarios`, com informações como nome, email e senha. Os treinos de cada usuário são armazenados na coleção `treinos`, onde cada documento representa um treino individual associado ao usuário correspondente através do campo `usuario_id`.
+
+Essa estrutura permite que os usuários gerenciem seus treinos de forma eficiente, com a capacidade de adicionar, editar, excluir e visualizar seus treinos de forma intuitiva no aplicativo.
 
 ## Configuração do Ambiente
 
