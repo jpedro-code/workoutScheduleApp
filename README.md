@@ -111,8 +111,9 @@ Essa estrutura permite que os usuários gerenciem seus treinos de forma eficient
 
 ## Requisitos Funcionais:
 
-1- Registro e Login de Usuários: O sistema deve permitir que os usuários se registrem e façam login utilizando um endereço de e-mail e senha.
-2- Gerenciamento de Treinos:
+1. Registro e Login de Usuários: 
+    - O sistema deve permitir que os usuários se registrem e façam login utilizando um endereço de e-mail e senha.
+2. Gerenciamento de Treinos:
     - Criar Treino: Os usuários devem poder adicionar novos treinos com nome, descrição e data.
     - Editar Treino: Os usuários devem poder atualizar as informações de treinos existentes.
     - Excluir Treino: Os usuários devem poder remover treinos que não são mais necessários.
