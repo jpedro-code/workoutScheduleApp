@@ -67,13 +67,13 @@ Este aplicativo utiliza o Firebase Realtime Database para armazenar e sincroniza
 
 ## Explicação dos campos usuarios e treinos
 
-1-usuarios:
+1. Usuarios:
 
 - nome: Nome completo do usuário.
 - email: Endereço de e-mail do usuário, usado para autenticação.
 - senha: Senha do usuário, armazenada de forma segura e criptografada.
 
-2- treinos:
+2. Treinos:
 
 - usuario_id: ID do usuário proprietário do treino.
 - nome: Nome do treino, pode ser qualquer texto descritivo.
@@ -83,24 +83,24 @@ Este aplicativo utiliza o Firebase Realtime Database para armazenar e sincroniza
 
 ## Casos de uso
 
-1- Criar (Create):
+1. Criar (Create):
 
 - Adicionar um novo usuário ao Firebase Authentication.
 - Adicionar um novo treino ao Firebase Realtime Database.
 
-2- Ler (Read):
+2. Ler (Read):
 
 - Recuperar os dados de um usuário específico.
 - Listar todos os treinos de um usuário.
 
-3- Atualizar (Update):
+3. Atualizar (Update):
 
 - Atualizar o nome de um treino existente.
 - Atualizar a descrição de um treino.
 - Atualizar a data de um treino.
 
 
-4- Excluir (Delete):
+4. Excluir (Delete):
 
 - Excluir um usuário e todos os seus treinos associados.
 - Excluir um treino específico de um usuário.
@@ -120,11 +120,11 @@ Essa estrutura permite que os usuários gerenciem seus treinos de forma eficient
 
 ## Requisitos Não Funcionais:
 
-1- Segurança: As informações dos usuários e treinos devem ser armazenadas de forma segura, com as senhas sendo criptografadas.
-2- Desempenho: O aplicativo deve ter tempos de resposta rápidos ao realizar operações de criação, leitura, atualização e exclusão de treinos.
-3- Disponibilidade: O sistema deve estar disponível para acesso e uso pelos usuários a qualquer momento, desde que tenham uma conexão com a internet.
-4- Compatibilidade: O aplicativo deve ser compatível com uma variedade de dispositivos Android e tamanhos de tela.
-5- Manutenibilidade: O código-fonte do aplicativo deve ser organizado e comentado de forma clara, facilitando a manutenção e futuras atualizações.
+1. Segurança: As informações dos usuários e treinos devem ser armazenadas de forma segura, com as senhas sendo criptografadas.
+2. Desempenho: O aplicativo deve ter tempos de resposta rápidos ao realizar operações de criação, leitura, atualização e exclusão de treinos.
+3. Disponibilidade: O sistema deve estar disponível para acesso e uso pelos usuários a qualquer momento, desde que tenham uma conexão com a internet.
+4. Compatibilidade: O aplicativo deve ser compatível com uma variedade de dispositivos Android e tamanhos de tela.
+5. Manutenibilidade: O código-fonte do aplicativo deve ser organizado e comentado de forma clara, facilitando a manutenção e futuras atualizações.
 
 ## Configuração do Ambiente
 
