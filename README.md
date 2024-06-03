@@ -49,8 +49,8 @@ Este é um aplicativo de gerenciamento de treinos desenvolvido em Kotlin. Ele pe
 │   │   │   │   │   ├── styles.xml 
 
 ```
-## Estrutura de Dados no Firebase
-Este aplicativo utiliza o Firebase Realtime Database para armazenar e sincronizar os dados dos treinos dos usuários. Abaixo está a estrutura de dados utilizada no Firebase:
+## Estrutura de Dados no Firebase com Diagrama Visual
+Este aplicativo utiliza o Firebase Realtime Database para armazenar e sincronizar os dados dos treinos dos usuários. Abaixo está o diagrama visual no Firebase:
 
 - `usuarios` (coleção)
   - {usuario_id} (documento)
@@ -65,9 +65,66 @@ Este aplicativo utiliza o Firebase Realtime Database para armazenar e sincroniza
     - descricao
     - data
 
+##Explicação dos campos usuarios e treinos
+
+1-usuarios:
+
+- nome: Nome completo do usuário.
+- email: Endereço de e-mail do usuário, usado para autenticação.
+- senha: Senha do usuário, armazenada de forma segura e criptografada.
+
+2- treinos:
+
+- usuario_id: ID do usuário proprietário do treino.
+- nome: Nome do treino, pode ser qualquer texto descritivo.
+- descricao: Descrição detalhada do treino, se houver.
+- data: Data em que o treino foi realizado ou agendado.
+
+
+## Casos de uso
+
+1- Criar (Create):
+
+- Adicionar um novo usuário ao Firebase Authentication.
+- Adicionar um novo treino ao Firebase Realtime Database.
+
+2- Ler (Read):
+
+- Recuperar os dados de um usuário específico.
+- Listar todos os treinos de um usuário.
+
+3- Atualizar (Update):
+
+- Atualizar o nome de um treino existente.
+- Atualizar a descrição de um treino.
+- Atualizar a data de um treino.
+
+
+4- Excluir (Delete):
+
+- Excluir um usuário e todos os seus treinos associados.
+- Excluir um treino específico de um usuário.
+
 Cada usuário tem sua própria entrada na coleção `usuarios`, com informações como nome, email e senha. Os treinos de cada usuário são armazenados na coleção `treinos`, onde cada documento representa um treino individual associado ao usuário correspondente através do campo `usuario_id`.
 
 Essa estrutura permite que os usuários gerenciem seus treinos de forma eficiente, com a capacidade de adicionar, editar, excluir e visualizar seus treinos de forma intuitiva no aplicativo.
+
+## Requisitos Funcionais:
+
+1- Registro e Login de Usuários: O sistema deve permitir que os usuários se registrem e façam login utilizando um endereço de e-mail e senha.
+2- Gerenciamento de Treinos:
+    - Criar Treino: Os usuários devem poder adicionar novos treinos com nome, descrição e data.
+    - Editar Treino: Os usuários devem poder atualizar as informações de treinos existentes.
+    - Excluir Treino: Os usuários devem poder remover treinos que não são mais necessários.
+    - Visualizar Treinos: Os usuários devem poder ver uma lista de todos os treinos cadastrados.
+
+## Requisitos Não Funcionais:
+
+1- Segurança: As informações dos usuários e treinos devem ser armazenadas de forma segura, com as senhas sendo criptografadas.
+2- Desempenho: O aplicativo deve ter tempos de resposta rápidos ao realizar operações de criação, leitura, atualização e exclusão de treinos.
+3- Disponibilidade: O sistema deve estar disponível para acesso e uso pelos usuários a qualquer momento, desde que tenham uma conexão com a internet.
+4- Compatibilidade: O aplicativo deve ser compatível com uma variedade de dispositivos Android e tamanhos de tela.
+5- Manutenibilidade: O código-fonte do aplicativo deve ser organizado e comentado de forma clara, facilitando a manutenção e futuras atualizações.
 
 ## Configuração do Ambiente
 
