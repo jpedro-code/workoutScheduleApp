@@ -1,5 +1,7 @@
 # Aplicativo de Treinos
 
+## Membros : João Pedro Rodrigues Pessoa, Rafael Rolim de Moura Gadelha ,Pedro Henrique Costa Ribeiro, Sanmir Gabriel Gouveia.
+
 ## Descrição
 
 Este é um aplicativo de gerenciamento de treinos desenvolvido em Kotlin. Ele permite que os usuários façam login e cadastro utilizando o Firebase Authentication e armazenem seus treinos no Firebase Realtime Database. Os usuários podem criar, editar, excluir e visualizar treinos com descrições e datas.
