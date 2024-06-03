@@ -42,7 +42,6 @@ class HomeFragment : Fragment() {
         binding.viewPager.adapter = adapter
 
         adapter.addFragment(TreinosCadastradosFragment(), "Treinos Cadastrados")
-        adapter.addFragment(ExerciciosCadastradosFragment(), "Exercícios Cadastrados")
 
         binding.viewPager.offscreenPageLimit = adapter.itemCount
         TabLayoutMediator(

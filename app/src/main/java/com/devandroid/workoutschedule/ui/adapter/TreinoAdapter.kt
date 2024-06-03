@@ -42,6 +42,5 @@ class TreinoAdapter(
 
         holder.binding.txtRemover.setOnClickListener { treinoSelecionado(treino, REMOVE) }
         holder.binding.txtEditar.setOnClickListener { treinoSelecionado(treino, EDIT) }
-        holder.binding.txtEditar.setOnClickListener { treinoSelecionado(treino, DETAILS) }
     }
 }

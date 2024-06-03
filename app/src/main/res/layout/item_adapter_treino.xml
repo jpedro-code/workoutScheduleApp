@@ -31,7 +31,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Treino de Costas"></TextView>
+                tools:text="Treino de Costas" />
 
             <TextView
                 android:id="@+id/txt_desc_treino"
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:ellipsize="end"
-                android:maxLines="2"
+                android:maxLines="6"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -77,25 +77,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:background="@drawable/bg_edit"
-                app:layout_constraintEnd_toStartOf="@+id/txt_detalhes"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/txt_remover"
                 app:layout_constraintTop_toBottomOf="@+id/txt_desc_treino"
                 app:layout_constraintVertical_bias="0.516" />
-
-            <TextView
-                android:id="@+id/txt_detalhes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/detalhes"
-                android:background="@drawable/bg_edit"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/txt_editar"
-                app:layout_constraintTop_toBottomOf="@+id/txt_desc_treino"
-                app:layout_constraintVertical_bias="0.516"
-                android:textColor="@color/primary_color"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

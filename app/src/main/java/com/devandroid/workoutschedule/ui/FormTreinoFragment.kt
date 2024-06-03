@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.devandroid.workoutschedule.R
 import com.devandroid.workoutschedule.databinding.FragmentExerciciosCadastradosBinding
 import com.devandroid.workoutschedule.databinding.FragmentFormTreinoBinding
@@ -26,6 +27,8 @@ class FormTreinoFragment : Fragment() {
 
     private var newTreino : Boolean = true
 
+    private val args : FormTreinoFragmentArgs by navArgs()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,9 +41,25 @@ class FormTreinoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initListeners()
-
+        getArgs()
     }
 
+    private fun getArgs(){
+        args.treino.let {
+            if(it != null){
+                treino = it
+                configTreino()
+            }
+        }
+    }
+
+    private fun configTreino(){
+        newTreino = false
+        binding.txtTitle.text = treino.nome
+        binding.edtNomeExercicio.setText(treino.nome)
+        binding.edtDescricao.setText(treino.descricao)
+        binding.edtData.setText(treino.data)
+    }
     private fun initListeners(){
         binding.btnSalvar.setOnClickListener{
             validateDatas()
@@ -56,7 +75,7 @@ class FormTreinoFragment : Fragment() {
         if(descricao.isNotEmpty() || nome.isNotEmpty()){
             if(newTreino) treino = Treino()
             treino.nome = nome
-            treino.descricao = nome
+            treino.descricao = descricao
             treino.data = data
             saveTreino()
         }else {
@@ -75,6 +94,9 @@ class FormTreinoFragment : Fragment() {
                 if(treino.isSuccessful){
                     if(newTreino){
                         Toast.makeText(requireContext(),"Salvo no Banco",Toast.LENGTH_LONG).show()
+                        findNavController().popBackStack()
+                    }else{
+                        Toast.makeText(requireContext(),"Modificado no Banco",Toast.LENGTH_LONG).show()
                         findNavController().popBackStack()
                     }
 

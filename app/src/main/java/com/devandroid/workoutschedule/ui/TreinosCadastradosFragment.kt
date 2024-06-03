@@ -42,7 +42,8 @@ class TreinosCadastradosFragment : Fragment() {
     }
     private fun initClicks(){
         binding.addTreino.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_formFragment)
+            val action = HomeFragmentDirections.actionHomeFragmentToFormFragment(null)
+            findNavController().navigate(action)
         }
     }
 
@@ -56,13 +57,16 @@ class TreinosCadastradosFragment : Fragment() {
                     if(snapshot.exists()){
                         for(snap in snapshot.children){
                             val treino = snap.getValue(Treino::class.java) as Treino
-                            treinoList.add(treino)
+                            if(!treinoList.contains(treino)){
+                                treinoList.add(treino)
+                            }
                         }
                         binding.progressBar.isVisible = false
                         binding.txtInfo.text = ""
                         initAdapter()
                     }else{
-                        binding.txtInfo.text = "Nenhuma Tarefa Cadastrada!"
+                        binding.progressBar.isVisible = false
+                        binding.txtInfo.text = "Nenhum Treino Cadastrado!"
                     }
                 }
 
@@ -88,10 +92,8 @@ class TreinosCadastradosFragment : Fragment() {
                 deleteTreino(treino)
             }
             TreinoAdapter.EDIT -> {
-                Toast.makeText(requireContext(), "Não Implementado", Toast.LENGTH_SHORT).show()
-            }
-            TreinoAdapter.DETAILS -> {
-
+                val action = HomeFragmentDirections.actionHomeFragmentToFormFragment(treino)
+                findNavController().navigate(action)
             }
         }
     }
@@ -99,7 +101,7 @@ class TreinosCadastradosFragment : Fragment() {
 
         FirebaseHelper
             .getDatabase()
-            .child("task")
+            .child("treino")
             .child(FirebaseHelper.getIdUser() ?: "")
             .child(treino.id)
             .removeValue()
@@ -123,6 +125,29 @@ class TreinosCadastradosFragment : Fragment() {
 
         Toast.makeText(requireContext(), "Deletada com sucesso", Toast.LENGTH_SHORT).show()
 
+    }
+
+    private fun updateTask(treino: Treino) {
+        FirebaseHelper
+            .getDatabase()
+            .child("task")
+            .child(FirebaseHelper.getIdUser() ?: "")
+            .child(treino.id)
+            .setValue(treino)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(
+                        requireContext(),
+                        "Treino Editado Com sucesso",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else {
+                    Toast.makeText(context,"Erro ao editar",Toast.LENGTH_LONG)
+                }
+            }.addOnFailureListener {
+                binding.progressBar.isVisible = false
+                Toast.makeText(context,"Erro ao editar",Toast.LENGTH_LONG)
+            }
     }
 
     override fun onDestroyView() {
